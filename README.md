@@ -23,6 +23,13 @@ The pipeline is:
     2. I separated these out because I could easily envision wanting reports going to separate destinations
     3. In a Production system, these would typically be separate microservices listening for an Event to push a notification
 
+
+## Running It
+
+You should just need to open the solution file, change the debug target to `Docker Compose`, and run. 
+
+There's some default configuration in `appsettings.json` that you can change, but the system should work out-of-the-box.
+
 ## Configuration
 
 1. All configuration is stored in `appsettings.json` file in the `Scraper` section
@@ -51,7 +58,7 @@ The pipeline is:
     2. Contains objects that would typically be externally shared in a common nuget file for downstream consumption
 2. RedditScraper.Poller
     1. `Workers/` - Contains all of the Background workers that make this system work
-    2. `Services - Contains a persistence layer/microservice mock class
+    2. `Services/` - Contains a persistence layer/microservice mock class
 
 ## Technologies
 
